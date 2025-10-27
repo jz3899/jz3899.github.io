@@ -4,11 +4,14 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Introduction
 
 Hi. This is Jicong's website. I am a second-year MPH student of biostatistics. I like playing basketball, playing video games. I have a dog.His name is Baobao.
 Here's my dog Baobao:
-![](C:\Users\svnsama\OneDrive\Desktop\Baobao.jpg)
+![](.\Baobao.jpg)
+
+# Links
+
+[Resume](resume.html)
