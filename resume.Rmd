@@ -1,0 +1,28 @@
+---
+title: "My resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Education
+
+Columbia University, Mailman School of Public Health, New York, NY, MPH.in Biostatistics. Overall GPA:3.82
+
+Georgia State University (GSU), Atlanta, GA, B.S. in Biological Science. Jun 2024 
+
+Southwest Jiaotong University (SWJTU), China, B.S. in Bioengineering. Jul 2024 
+
+Double degree program at GSU and SWJTU, overall GPA: 3.48 
+
+# Internship
+
+Summer Intern as a cell culture assistant	Jun 2021-Aug 2021. Shanghai Haobai Biotech Company 
+
+# Research project
+
+The Inhibitory Effects of FFAAP on Zika Virus Replication  	Aug 2022-May 2023. Advisor: Professor Dr. Julia Hilliard, the National B Virus Laboratory, Georgia State University, USA 
+
+Identification of Hypervariable Signals across ChIP-seq or ATAC-seq Samples	Feb 2023-Sep 2023. Advisor: Professor Nan Liu, Interdisciplinary Research Center on Biology and Chemistry, Shanghai Institute of Organic Chemistry, Chinese Academy of Sciences, Shanghai, China 
