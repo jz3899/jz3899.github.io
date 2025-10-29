@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html
+    - text: "Plots"
+      href: jz3899_hw5.html
     - icon: fa-envelope fa-lg
       href: mailto:<jz3899@cumc.colunbia.edu>
     - icon: fa-github fa-lg

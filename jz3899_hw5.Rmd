@@ -1,0 +1,63 @@
+---
+title: "jz3899_hw5"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+library(p8105.datasets)
+
+data("instacart")
+instacart_sample = instacart %>%
+  janitor::clean_names() %>%
+  sample_n(200) %>%
+  filter(!is.na(aisle), !is.na(department), !is.na(order_hour_of_day), !is.na(order_dow))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+scatter_data = instacart_sample %>%
+  mutate(order_dow = factor(order_dow,
+  labels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"))) %>%
+  plot_ly(
+    x = ~order_hour_of_day, y = ~order_dow, color = ~aisle, type = "scatter", mode = "marker", alpha = 0.5
+  )
+scatter_data
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+box_plot = instacart_sample %>%
+  group_by(department) %>%
+  filter(n() > 50) %>%
+  plot_ly(
+    x = ~reorder(department, order_hour_of_day, median), y = ~order_hour_of_day, type = "box", colors = "viridis"
+  )
+box_plot
+```
+
+### Chart C
+
+```{r}
+bar_plot <- instacart_sample %>%
+  count(aisle, sort = TRUE) %>%
+  top_n(10, n) %>%
+  plot_ly(
+    x = ~reorder(aisle,n), y = ~n, type = "bar", colors = "viridis"
+  )
+bar_plot
+```
+
